@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Tweetor.Models.Twit>
+
+@{
+    ViewData["Title"] = "TwitList";
+}
+
+<h2>TwitList</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<
+@foreach (var item in Model)
+{
+    <div class="panel">
+        <h3>@item.Author</h3>
+        <h1>@item.content</h1>
+        <h5>@item.Likes  likes | Twit ID: @item.TwitID</h5>
+    </div>
+    <hr />
+}
